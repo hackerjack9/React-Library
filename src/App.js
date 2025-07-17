@@ -1,5 +1,5 @@
 import Nav from './components/Nav';
-import "./App.css";
+import "./index.css";
 import Footer from './components/Footer';
 import {BrowerRouter as Router, Route} from '.react-router-dom';
 import Home from "./pages/Home";
@@ -13,6 +13,7 @@ function App() {
       <Nav />
       <Route path='/' exact componet={Home}/>
       <Route path='/books' render={() => <Books books={books} />} />
+      <Route path="/books/1" render={() => <BookInfo books={books} />} /> 
       <Footer />
    </div>
    </Router>
